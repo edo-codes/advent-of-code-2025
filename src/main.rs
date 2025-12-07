@@ -3,8 +3,14 @@ use std::fs::File;
 use std::io::{self, BufRead, BufReader};
 use std::path::Path;
 
+mod day01;
+
 #[allow(clippy::type_complexity)]
-const PROBLEMS: [(&str, fn(BufReader<File>) -> u64); 0] = [];
+const PROBLEMS: [(&str, fn(BufReader<File>) -> u64); 2] = [
+    //
+    ("1a", day01::a),
+    ("1b", day01::b),
+];
 
 fn main() {
     let (name, problem) = if let Some(arg) = args().nth(1) {
